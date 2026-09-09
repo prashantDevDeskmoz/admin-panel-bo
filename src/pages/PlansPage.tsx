@@ -24,7 +24,7 @@ export default function PlansPage() {
       .plans()
       .then((res) => {
         setPlans(res.data || []);
-        if (!selected && res.data?.[0]) setSelected(res.data[0]);
+        // if (!selected && res.data?.[0]) setSelected(res.data[0]);
       })
       .catch((e) => setError(e instanceof Error ? e.message : "Failed to load plans"));
   };

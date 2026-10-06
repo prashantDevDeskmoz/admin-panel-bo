@@ -19,7 +19,6 @@ async function request(path: string, options: RequestInit = {}) {
     "Content-Type": "application/json",
     ...(options.headers as Record<string, string> | undefined),
   };
-  const hadToken = Boolean(getToken());
   const token = getToken();
   if (token) headers.Authorization = `Bearer ${token}`;
 

@@ -27,9 +27,9 @@ async function request(path: string, options: RequestInit = {}) {
   const data = await res.json().catch(() => ({}));
 
   // Only force-logout on 401 when a session token was already in use (not failed login)
-  if (res.status === 401 && hadToken && path !== "/login") {
+  if (res.status === 401 && path !== "/login") {
     clearToken();
-    window.location.href = "/login";
+    window.location.href = "admin/login"; 
     throw new Error(data.message || "Session expired");
   }
 

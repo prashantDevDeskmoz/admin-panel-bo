@@ -158,26 +158,14 @@ export default function DashboardPage() {
 
       {data ? (
         <>
-          <div className="metric-grid">
-            <div className="metric-card">
+          <div className="metric-grid" style={{ gridTemplateColumns: "repeat(2, minmax(0, 1fr))" }}>
+            <div className="metric-card w-full">
               <div className="metric-icon purple">C</div>
               <div className="metric-label">Total Clients</div>
               <div className="metric-value">{data.totalStores}</div>
               <div className="metric-foot muted">
                 {data.activeStores} active · {data.inactiveStores} uninstalled
               </div>
-            </div>
-            <div className="metric-card">
-              <div className="metric-icon blue">J</div>
-              <div className="metric-label">Jobs (24h)</div>
-              <div className="metric-value">{data.jobsLast24h}</div>
-              <div className="metric-foot muted">{data.jobsLast7d} in last 7 days</div>
-            </div>
-            <div className="metric-card">
-              <div className="metric-icon green">P</div>
-              <div className="metric-label">Items processed (7d)</div>
-              <div className="metric-value">{data.itemsProcessedLast7d}</div>
-              <div className="metric-foot muted">Across bulk & related jobs</div>
             </div>
             <div className="metric-card">
               <div className="metric-icon orange">Q</div>

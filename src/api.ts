@@ -61,4 +61,9 @@ export const adminApi = {
     return request(`/clients${qs ? `?${qs}` : ""}`);
   },
   client: (id: string) => request(`/clients/${id}`),
+  logs: (params: { date?: string; storeHash?: string; type?: string; level?: string } = {}) => {
+    const q = new URLSearchParams(Object.entries(params).filter(([, v]) => v) as [string, string][]);
+    const qs = q.toString();
+    return request(`/logs${qs ? `?${qs}` : ""}`);
+  },
 };

@@ -700,3 +700,69 @@ th {
   justify-content: flex-end;
   gap: 10px;
 }
+
+/* —— Workers —— */
+.auto-refresh {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.badge.info-badge {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.queue-name {
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 2px;
+}
+
+.queue-paused {
+  margin-left: 6px;
+}
+
+.num-strong {
+  font-weight: 600;
+  color: #111827;
+}
+
+.num-danger {
+  font-weight: 600;
+  color: #b91c1c;
+}
+
+.workers-failures {
+  margin-top: 14px;
+}
+
+.failure-reason {
+  max-width: 480px;
+  color: #991b1b;
+  word-break: break-word;
+}
+
+/* —— Logs —— */
+.log-message {
+  max-width: 520px;
+  word-break: break-word;
+}
+
+.modal-card.log-details {
+  width: min(760px, 100%);
+}
+
+.log-details pre {
+  max-height: 60vh;
+  overflow: auto;
+  margin: 0 0 16px;
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  white-space: pre-wrap;
+  word-break: break-word;
+}

@@ -7,6 +7,7 @@ import PlansPage from "./pages/PlansPage";
 import WorkersPage from "./pages/WorkersPage";
 import ClientsPage from "./pages/ClientsPage";
 import ClientDetailPage from "./pages/ClientDetailPage";
+import LogsPage from "./pages/LogsPage";
 
 function RequireAuth({ children }: { children: React.ReactNode }) {
   if (!getToken()) return <Navigate to="/login" replace />;
@@ -30,6 +31,7 @@ export default function App() {
         <Route path="workers" element={<WorkersPage />} />
         <Route path="clients" element={<ClientsPage />} />
         <Route path="clients/:id" element={<ClientDetailPage />} />
+        <Route path="logs" element={<LogsPage />} />
       </Route>
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>

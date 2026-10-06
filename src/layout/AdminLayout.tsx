@@ -7,6 +7,7 @@ const links = [
   { to: "/clients", label: "Clients" },
   { to: "/plans", label: "Plans" },
   { to: "/workers", label: "Workers" },
+  { to: "/logs", label: "Logs" },
 ];
 
 export default function AdminLayout() {

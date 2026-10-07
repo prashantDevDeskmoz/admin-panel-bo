@@ -248,7 +248,7 @@ export default function ClientsPage() {
             ))}
           </tbody>
         </table>
-        {!clients.length ? <p className="muted">No clients found</p> : null}
+        {!clients.length ? loading ? <p className="muted">Loading…</p> : <p className="muted">No clients found</p> : null}
       </div>
 
       <div className="toolbar" style={{ marginTop: 14, justifyContent: "space-between" }}>
